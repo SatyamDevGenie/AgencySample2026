@@ -1,32 +1,21 @@
-import Header from "./components/Header"
-import Sidebar from "./components/Sidebar"
-import Notebook from "./components/Notebook"
-import ModelResults from "./components/ModelResults"
-import PredictionPanel from "./components/PredictionPanel"
-
-export default function App() {
+function App() {
   return (
-    <div className="h-screen bg-gray-100 flex flex-col">
+    <div className="h-screen flex items-center justify-center bg-gray-100">
+      
+      <div className="bg-blue-600 text-white p-10 rounded-xl shadow-xl text-center">
+        
+        <h1 className="text-3xl font-bold mb-4">
+          Tailwind CSS is Working 🚀
+        </h1>
 
-      <Header />
-
-      <div className="flex flex-1 p-4 gap-4">
-
-        <Sidebar />
-
-        <div className="flex-1 flex flex-col gap-4">
-
-          <Notebook />
-
-          <div className="grid grid-cols-2 gap-4">
-            <ModelResults />
-            <PredictionPanel />
-          </div>
-
-        </div>
+        <button className="bg-white text-blue-600 px-4 py-2 rounded font-semibold hover:bg-gray-200">
+          Test Button
+        </button>
 
       </div>
 
     </div>
   )
 }
+
+export default App
