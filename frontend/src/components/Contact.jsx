@@ -1,143 +1,123 @@
 import React from "react";
-import { Mail, ArrowUpRight, MessageCircle } from "lucide-react";
+import { Mail, ArrowUpRight, PhoneCall } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
-    const team = [
-        { name: "Satyam", role: "Full Stack Lead", phone: "+91 98765 43210" },
-        { name: "Harsh", role: "Design & Frontend", phone: "+91 98765 43211" },
-        { name: "Vedant", role: "Marketing & Outreach", phone: "+91 98765 43212" },
-    ];
-
     return (
         <section
             id="contact"
             className="py-20 sm:py-24 lg:py-32 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto"
         >
-            {/* HEADER */}
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14 sm:mb-20">
-                <div className="max-w-xl">
-                    <h2 className="text-blue-500 font-bold tracking-[0.3em] text-xs mb-4 uppercase">
-                        Contact
-                    </h2>
+            <motion.div
+                className="text-center mb-12 sm:mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+                <h2 className="text-blue-500 font-bold tracking-[0.3em] text-xs mb-3 uppercase">
+                    Contact
+                </h2>
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight">
+                    Have an idea?
+                    <span className="block text-slate-400 text-lg sm:text-xl font-normal mt-2">
+                        One email or one call is enough to start.
+                    </span>
+                </h3>
+            </motion.div>
 
-                    <h3 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight">
-                        HAVE AN IDEA? <br />
-                        <span className="text-slate-700">LET'S TALK.</span>
-                    </h3>
-                </div>
+            <div className="max-w-3xl mx-auto">
+                <motion.div
+                    className="group relative overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 bg-slate-900/80 px-6 py-7 sm:px-8 sm:py-9 shadow-[0_0_60px_rgba(15,23,42,0.9)]"
+                    initial={{ opacity: 0, y: 24, scale: 0.97 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{
+                        duration: 4,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                    }}
+                >
+                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-600/20 blur-[90px] rounded-full" />
+                    <div className="absolute -bottom-12 -left-6 w-40 h-40 bg-purple-600/25 blur-[95px] rounded-full" />
 
-                <div className="hidden lg:block text-right">
-                    <p className="text-slate-500 text-xs font-medium uppercase tracking-widest">
-                        Available for global <br /> projects 2026
-                    </p>
-                </div>
-            </div>
-
-            {/* GRID */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-
-                {/* EMAIL CARD */}
-                <div className="lg:col-span-7 group relative overflow-hidden p-6 sm:p-10 lg:p-12 rounded-2xl sm:rounded-3xl border border-white/5 hover:border-blue-500/20 transition-all duration-500">
-
-                    <div className="relative z-10 flex flex-col h-full justify-between">
-                        <div>
-                            <div className="w-14 h-14 sm:w-16 sm:h-16 bg-blue-600 rounded-xl sm:rounded-2xl flex items-center justify-center mb-8 rotate-3 group-hover:rotate-0 transition-transform duration-500">
-                                <Mail className="text-white" size={28} />
-                            </div>
-
-                            <h4 className="text-2xl sm:text-3xl font-bold text-black mb-4 italic">
-                                Drop us a line
-                            </h4>
-
-                            <p className="text-black text-sm sm:text-base max-w-md leading-relaxed">
-                                Whether it's a full-scale app or a quick design audit, we're
-                                ready to dive in.
-                            </p>
-                        </div>
-
-                        <a
-                            href="mailto:hello@devnexus.agency"
-                            className="mt-10 sm:mt-14 inline-flex flex-wrap items-center text-xl sm:text-2xl md:text-3xl font-bold text-black hover:text-blue-500 transition-colors gap-3"
+                    <div className="relative z-10 flex flex-col gap-6">
+                        <motion.div
+                            className="flex items-center gap-3"
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true, amount: 0.7 }}
+                            transition={{ duration: 0.45, ease: "easeOut" }}
                         >
-                            hello@devnexus.agency
-                            <ArrowUpRight
-                                size={26}
-                                className="text-blue-600 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                            />
-                        </a>
-                    </div>
+                            <div className="w-11 h-11 sm:w-12 sm:h-12 bg-blue-600 rounded-xl flex items-center justify-center">
+                                <Mail className="text-white" size={22} />
+                            </div>
+                            <div className="text-left">
+                                <p className="text-xs font-semibold tracking-[0.28em] uppercase text-slate-300">
+                                    Drop us a line
+                                </p>
+                                <p className="text-slate-200 text-sm sm:text-base mt-1">
+                                    We reply personally within 24 hours, wherever you are in the world.
+                                </p>
+                            </div>
+                        </motion.div>
 
-                    {/* Background Glow */}
-                    <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-600/10 blur-[90px] rounded-full" />
-                </div>
+                        <motion.div
+                            className="inline-flex items-center gap-2 rounded-full bg-slate-800/80 border border-white/10 px-3 py-1.5 w-fit"
+                            initial={{ opacity: 0, y: 6 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.6 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                        >
+                            <span className="relative flex h-2.5 w-2.5">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-40" />
+                                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
+                            </span>
+                            <motion.span
+                                className="text-[11px] sm:text-xs text-slate-100"
+                                animate={{ opacity: [0.6, 1, 0.6] }}
+                                transition={{ duration: 3, repeat: Infinity }}
+                            >
+                                No forms. Just humans on the other side.
+                            </motion.span>
+                        </motion.div>
 
-                {/* TEAM CARDS */}
-                <div className="lg:col-span-5 flex flex-col gap-6">
+                        <motion.div
+                            className="flex flex-col gap-4 pt-2"
+                            initial={{ opacity: 0, y: 12 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.7 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+                        >
+                            <a
+                                href="mailto:hello@devnexus.agency"
+                                className="inline-flex flex-wrap items-center gap-3 text-lg sm:text-xl md:text-2xl font-semibold text-white hover:text-blue-400 transition-colors break-all"
+                            >
+                                hello@devnexus.agency
+                                <ArrowUpRight
+                                    size={22}
+                                    className="text-blue-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                                />
+                            </a>
 
-                    {/* TEAM LIST */}
-                    <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl flex flex-col justify-between">
-
-                        <h4 className="text-black font-black text-lg sm:text-xl mb-6 uppercase tracking-tight">
-                            Direct Lines
-                        </h4>
-
-                        <div className="space-y-6">
-                            {team.map((member, i) => (
-                                <div
-                                    key={i}
-                                    className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
-                                >
-                                    <div className="flex items-center gap-4">
-                                        <span className="text-slate-300 font-mono text-xs">
-                                            0{i + 1}
-                                        </span>
-
-                                        <div>
-                                            <p className="text-black font-bold text-base sm:text-lg leading-none">
-                                                {member.name}
-                                            </p>
-
-                                            <p className="text-slate-500 text-[10px] uppercase font-bold tracking-widest mt-1">
-                                                {member.role}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex items-center gap-3">
-                                        <a
-                                            href={`tel:${member.phone}`}
-                                            className="text-black/60 hover:text-black font-mono text-xs sm:text-sm transition-colors"
-                                        >
-                                            {member.phone}
-                                        </a>
-
-                                        <a
-                                            href={`https://wa.me/${member.phone.replace(/\D/g, "")}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-2 bg-slate-100 rounded-full text-slate-400 hover:text-green-500 hover:bg-green-50 transition"
-                                        >
-                                            <MessageCircle size={18} />
-                                        </a>
-                                    </div>
+                            <div className="flex flex-wrap items-center gap-3 text-sm sm:text-base text-slate-300">
+                                <div className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-3 py-1">
+                                    <PhoneCall className="w-4 h-4 text-blue-400" />
+                                    <a
+                                        href="tel:+919876543210"
+                                        className="font-medium hover:text-blue-400 transition-colors"
+                                    >
+                                        +91 98765 43210
+                                    </a>
                                 </div>
-                            ))}
-                        </div>
+                                <span className="text-xs sm:text-sm text-slate-500">
+                                    WhatsApp / Call between 10 AM – 7 PM IST
+                                </span>
+                            </div>
+                        </motion.div>
                     </div>
-
-                    {/* STATUS CARD */}
-                    <div className="bg-blue-600 p-6 sm:p-8 rounded-2xl sm:rounded-3xl flex items-center justify-between text-white">
-                        <span className="font-bold text-sm sm:text-base">
-                            Active internationally.
-                        </span>
-
-                        <div className="flex gap-2">
-                            <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-                            <div className="w-2 h-2 bg-white/40 rounded-full" />
-                            <div className="w-2 h-2 bg-white/40 rounded-full" />
-                        </div>
-                    </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

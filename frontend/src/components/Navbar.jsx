@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
+    { name: "Work", href: "#work" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -30,11 +31,11 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled || isOpen
-            ? "bg-black/95 backdrop-blur-md py-4"
-            : "bg-transparent py-5"
+            ? "bg-slate-950/95 backdrop-blur-xl py-3 shadow-[0_18px_45px_rgba(15,23,42,0.9)]"
+            : "bg-gradient-to-b from-slate-950 via-slate-950/60 to-transparent py-4"
         } border-b border-white/10`}
       >
-        <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between">
           
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer relative z-[60]">
@@ -50,22 +51,22 @@ const Navbar = () => {
             </div>
 
             <span
-              className={`text-lg sm:text-xl font-black tracking-widest ${
+              className={`text-base sm:text-lg md:text-xl font-black tracking-[0.35em] ${
                 isOpen ? "text-black" : "text-white"
-              }`}
+              } uppercase`}
             >
               DEVNEXUS
             </span>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-10">
-            <div className="flex gap-8">
+          <div className="hidden md:flex items-center gap-8 lg:gap-10">
+            <div className="flex gap-6 lg:gap-8">
               {links.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 hover:text-white transition"
+                  className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-400 hover:text-white transition-colors"
                 >
                   {link.name}
                 </a>
@@ -74,7 +75,7 @@ const Navbar = () => {
 
             <a
               href="#contact"
-              className="px-6 py-3 bg-white text-black text-xs font-black uppercase tracking-widest rounded-full hover:bg-blue-600 hover:text-white transition"
+              className="px-6 py-2.5 bg-white text-black text-[11px] font-black uppercase tracking-[0.24em] rounded-full hover:bg-blue-600 hover:text-white transition-colors shadow-[0_0_30px_rgba(148,163,184,0.4)]"
             >
               Work With Us
             </a>
@@ -82,7 +83,7 @@ const Navbar = () => {
 
           {/* Mobile Button */}
           <button
-            className="md:hidden relative z-[60] p-2"
+            className="md:hidden relative z-[60] p-2 rounded-full bg-black/20 backdrop-blur-sm border border-white/10"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (

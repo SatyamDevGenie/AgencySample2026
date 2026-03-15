@@ -40,25 +40,33 @@ const Services = () => {
       id="services"
       className="py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-12 max-w-7xl mx-auto"
     >
-      {/* SECTION HEADER */}
-      <div className="text-center mb-12 sm:mb-16 max-w-2xl mx-auto">
-        <h2 className="text-xs sm:text-sm font-bold text-blue-500 uppercase tracking-[0.3em] mb-3">
-          Our Capabilities
-        </h2>
+      <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-10 sm:mb-14">
+        <div className="max-w-xl">
+          <h2 className="text-xs sm:text-sm font-bold text-blue-400 uppercase tracking-[0.3em] mb-3">
+            Services
+          </h2>
 
-        <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white italic tracking-tight">
-          VERSATILE SERVICES
-        </h3>
+          <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
+            One team for{" "}
+            <span className="text-blue-400">product, brand & growth.</span>
+          </h3>
+        </div>
+
+        <p className="max-w-md text-slate-400 text-sm sm:text-base">
+          Six core services that cover content, design and code — so you do not
+          have to juggle multiple vendors.
+        </p>
       </div>
 
-      {/* SERVICES GRID */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-7">
         {services.map((item, index) => (
           <div
             key={index}
-            className="group p-6 sm:p-7 lg:p-8 rounded-2xl sm:rounded-3xl bg-slate-900/50 border border-white/5 hover:border-blue-600/30 hover:bg-slate-900 transition-all duration-300"
+            className="group relative overflow-hidden p-5 sm:p-6 lg:p-7 rounded-2xl sm:rounded-3xl bg-slate-900/70 border border-white/5 shadow-[0_18px_45px_rgba(15,23,42,0.9)] hover:shadow-[0_24px_60px_rgba(37,99,235,0.55)] hover:border-blue-500/50 hover:bg-slate-900 transition-all duration-300 flex flex-col"
           >
-            {/* ICON */}
+            <div className="pointer-events-none absolute inset-px opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.18),_transparent_55%)] transition-opacity duration-500" />
+
+            <div className="relative">
             <div className="w-11 h-11 sm:w-12 sm:h-12 bg-blue-600/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors">
               <item.icon
                 className="text-blue-500 group-hover:text-white transition-colors"
@@ -66,15 +74,21 @@ const Services = () => {
               />
             </div>
 
-            {/* TITLE */}
             <h4 className="text-lg sm:text-xl font-bold text-white mb-2">
               {item.title}
             </h4>
 
-            {/* DESCRIPTION */}
-            <p className="text-slate-400 text-sm sm:text-[15px] leading-relaxed">
+            <p className="text-slate-400 text-sm sm:text-[15px] leading-relaxed mb-4 flex-1">
               {item.desc}
             </p>
+
+            <div className="flex items-center justify-between text-[11px] text-slate-500 uppercase tracking-[0.22em]">
+              <span>Included in retainers</span>
+              <span className="group-hover:text-blue-300 transition-colors">
+                Senior team only
+              </span>
+            </div>
+            </div>
           </div>
         ))}
       </div>
