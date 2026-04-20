@@ -191,7 +191,7 @@ const RobotIllustration = () => {
 
         <div className="relative z-10 mt-4 text-xs sm:text-sm text-slate-300">
           <p className="font-semibold">
-            “Hey, I am your freelance build squad. Let&apos;s ship your next launch.”
+            “Hey — I&apos;m Satyam. Let&apos;s ship your next build.”
           </p>
         </div>
       </motion.div>

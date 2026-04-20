@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Services from "./components/Services";
+import TechSkills from "./components/TechSkills";
+import Experience from "./components/Experience";
 import CaseStudies from "./components/CaseStudies";
 import Contact from "./components/Contact";
 import ExperienceStrip from "./components/ExperienceStrip";
@@ -28,6 +30,14 @@ function App() {
 
         <section className="w-full">
           <Services />
+        </section>
+
+        <section className="w-full">
+          <TechSkills />
+        </section>
+
+        <section className="w-full">
+          <Experience />
         </section>
 
         <section className="w-full">
@@ -63,18 +73,17 @@ function App() {
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <div className="mt-1 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-white flex-shrink-0">
-                <span className="text-xs font-black tracking-[0.28em] text-black">
-                  DN
+                <span className="text-[10px] font-black tracking-[0.15em] text-black">
+                  SS
                 </span>
               </div>
               <div className="min-w-0">
                 <p className="text-xs font-semibold tracking-[0.3em] uppercase text-slate-400">
-                  DevNexus Agency
+                  Satyam Sawant
                 </p>
                 <p className="mt-2 text-sm sm:text-base text-slate-300 max-w-md">
-                  We are a freelance startup agency that can design, build and ship almost
-                  anything you need — at transparent, reasonable rates compared to big
-                  MNC expectations.
+                  Full stack developer — shipping web products from idea to production.
+                  Open to freelance and full-time collaborations.
                 </p>
               </div>
             </motion.div>
@@ -97,6 +106,12 @@ function App() {
                 <a href="#services" className="hover:text-white transition-colors">
                   Services
                 </a>
+                <a href="#skills" className="hover:text-white transition-colors">
+                  Tech Skills
+                </a>
+                <a href="#experience" className="hover:text-white transition-colors">
+                  Experience
+                </a>
                 <a href="#work" className="hover:text-white transition-colors">
                   Work
                 </a>
@@ -105,10 +120,10 @@ function App() {
                 </a>
               </nav>
               <p className="text-[11px] text-slate-500">
-                Ready when you are — share your idea and we&apos;ll send a simple, no‑nonsense plan.
+                Have a project? Reach out — I&apos;ll respond with a clear next step.
               </p>
               <p className="text-[11px] text-slate-600">
-                © {new Date().getFullYear()} DevNexus Agency. All rights reserved.
+                © {new Date().getFullYear()} Satyam Sawant. All rights reserved.
               </p>
             </motion.div>
           </motion.div>

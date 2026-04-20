@@ -42,16 +42,15 @@ const CaseStudies = () => {
             Recent Work
           </h2>
           <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-            Freelance startup studio
+            Selected projects
             <br className="hidden sm:block" />
-            <span className="text-blue-400">working with clients worldwide.</span>
+            <span className="text-blue-400">built end to end.</span>
           </h3>
         </div>
 
         <p className="max-w-md text-slate-400 text-sm sm:text-base">
-          We are a freelance startup agency partnering with any type of client —
-          from solo founders to established brands — across India and the globe.
-          If you have a serious idea, we can help you ship it.
+          E‑commerce, SaaS, healthtech and content platforms — from MVPs to production
+          apps for clients in India and abroad.
         </p>
       </div>
 

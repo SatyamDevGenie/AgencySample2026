@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Code2, Menu, X, ArrowRight } from "lucide-react";
+import { Code2, Menu, X, ArrowRight, Download } from "lucide-react";
+import { RESUME_URL, RESUME_FILENAME } from "../resume";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,8 @@ const Navbar = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
+    { name: "Tech Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
     { name: "Work", href: "#work" },
     { name: "Contact", href: "#contact" },
   ];
@@ -55,7 +58,7 @@ const Navbar = () => {
                 isOpen ? "text-black" : "text-white"
               } uppercase`}
             >
-              DEVNEXUS
+              SATYAM
             </span>
           </div>
 
@@ -74,10 +77,12 @@ const Navbar = () => {
             </div>
 
             <a
-              href="#contact"
-              className="px-6 py-2.5 bg-white text-black text-[11px] font-black uppercase tracking-[0.24em] rounded-full hover:bg-blue-600 hover:text-white transition-colors shadow-[0_0_30px_rgba(148,163,184,0.4)]"
+              href={RESUME_URL}
+              download={RESUME_FILENAME}
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-black text-[11px] font-black uppercase tracking-[0.24em] rounded-full hover:bg-blue-600 hover:text-white transition-colors shadow-[0_0_30px_rgba(148,163,184,0.4)]"
             >
-              Work With Us
+              <Download size={14} aria-hidden />
+              Resume
             </a>
           </div>
 
@@ -120,6 +125,16 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              href={RESUME_URL}
+              download={RESUME_FILENAME}
+              onClick={() => setIsOpen(false)}
+              className={`inline-flex items-center gap-2 text-lg font-black text-blue-600 uppercase mt-4 ${
+                isOpen ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Download size={22} /> Download resume
+            </a>
           </div>
 
           {/* Bottom Contact */}
@@ -129,17 +144,16 @@ const Navbar = () => {
             </p>
 
             <a
-              href="mailto:hello@devnexus.agency"
+              href="#contact"
+              onClick={() => setIsOpen(false)}
               className="flex items-center justify-between text-xl sm:text-2xl font-black text-blue-600"
             >
-              Email Us
+              Contact
               <ArrowRight size={22} />
             </a>
 
-            <div className="mt-6 flex flex-wrap gap-4 text-xs font-black uppercase tracking-widest">
-              <span>+91 98765 43210</span>
-              <span>Instagram</span>
-              <span>LinkedIn</span>
+            <div className="mt-6 flex flex-wrap gap-4 text-xs font-black uppercase tracking-widest text-slate-600">
+              <span>Satyam Sawant · Full Stack Developer</span>
             </div>
           </div>
         </div>

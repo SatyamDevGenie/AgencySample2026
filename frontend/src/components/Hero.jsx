@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import VisualBackground from "./VisualBackground";
 import RobotIllustration from "./RobotIllustration";
+import { RESUME_URL, RESUME_FILENAME } from "../resume";
 
 const Hero = () => {
   return (
@@ -20,50 +21,49 @@ const Hero = () => {
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="max-w-3xl"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/60 px-3 py-1 mb-4 backdrop-blur">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-slate-900/60 px-3 py-1.5 mb-4 backdrop-blur">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-40" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
             </span>
-            <p className="text-[10px] sm:text-[11px] font-semibold tracking-[0.25em] text-slate-200 uppercase">
-              Available for 2026 projects – India & global
+            <p className="text-xs sm:text-sm font-medium tracking-wide text-slate-300">
+              Full stack developer · Freelance & contracts
             </p>
           </div>
 
-          <p className="text-[11px] sm:text-xs font-semibold tracking-[0.32em] text-blue-300 uppercase mb-4">
-            DEVNEXUS AGENCY · PRODUCT · CODE · GROWTH
+          <p className="text-xs sm:text-sm font-medium text-blue-400/90 mb-3 tracking-wide">
+            Satyam Sawant · React · Node · Product
           </p>
 
-          <h1 className="font-black tracking-tight leading-[1.03] text-white text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mb-6">
-            Digital products
-            <br className="hidden sm:block" />
-            <span className="text-blue-400">that feel premium</span>
-            {" "}from day one.
+          <h1 className="font-bold tracking-tight text-white text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] leading-snug mb-5 max-w-xl">
+            Hi, I&apos;m Satyam —{" "}
+            <span className="text-blue-400 font-semibold">full stack developer</span>
+            {" "}shipping web apps.
           </h1>
 
-          <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-xl sm:max-w-2xl leading-relaxed mb-8 sm:mb-10">
-            We help Indian and international teams launch sharp, conversion‑ready
-            websites, apps and brand experiences — with startup speed and
-            enterprise polish.
+          <p className="text-slate-400 text-base sm:text-[1.05rem] max-w-xl leading-relaxed mb-8 font-normal">
+            I design and build end‑to‑end web products — React frontends, Node backends,
+            APIs and databases — for startups, agencies and clients worldwide.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             <motion.a
-              whileHover={{ y: -2, scale: 1.02 }}
-              whileTap={{ scale: 0.97 }}
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.99 }}
               href="#contact"
-              className="w-full sm:w-auto text-center px-7 py-3.5 sm:px-8 sm:py-4 bg-blue-500 text-white font-semibold rounded-full hover:bg-blue-600 transition-all duration-300 shadow-[0_0_40px_rgba(37,99,235,0.35)]"
+              className="w-full sm:w-auto text-center px-6 py-3 sm:px-7 sm:py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/30"
             >
-              Book a 20‑min call
+              Get in touch
             </motion.a>
 
             <motion.a
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.97 }}
-              href="#work"
-              className="w-full sm:w-auto text-center px-7 py-3.5 sm:px-8 sm:py-4 border border-white/15 text-slate-100 font-semibold rounded-full hover:border-blue-400/80 hover:text-white transition-all duration-300 bg-slate-900/40"
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.99 }}
+              href={RESUME_URL}
+              download={RESUME_FILENAME}
+              className="w-full sm:w-auto text-center px-6 py-3 sm:px-7 sm:py-3 border border-white/15 text-slate-200 text-sm font-medium rounded-lg hover:border-white/25 hover:bg-white/5 transition-colors"
             >
-              View recent work
+              Download resume
             </motion.a>
           </div>
         </motion.div>

@@ -60,17 +60,15 @@ const ExperienceStrip = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <p className="text-xs font-semibold tracking-[0.3em] uppercase text-blue-400 mb-3">
-              Clients × DevNexus
+              Clients × Satyam
             </p>
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-tight mb-3">
-              Let your idea meet
-              <span className="text-blue-400"> our build squad.</span>
+              Experience how I
+              <span className="text-blue-400"> ship your product.</span>
             </h3>
             <p className="text-slate-300 text-sm sm:text-base max-w-xl">
-              Whether you are a solo founder, a small team or a growing brand,
-              we plug in as your product partner — designing, coding and
-              shipping with the care of an in‑house team but at freelance‑level
-              flexibility.
+              From MVPs to production apps — I work closely with teams and founders on
+              architecture, implementation and delivery.
             </p>
           </motion.div>
 
@@ -115,7 +113,7 @@ const ExperienceStrip = () => {
                   and pricing that make sense.”
                 </p>
                 <p className="mt-2 text-[10px] text-blue-300 uppercase tracking-[0.22em]">
-                  DevNexus robot squad
+                  Satyam Sawant
                 </p>
               </div>
             </motion.div>

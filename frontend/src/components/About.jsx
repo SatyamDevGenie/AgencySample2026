@@ -4,9 +4,9 @@ import VisualBackground from "./VisualBackground";
 
 const About = () => {
     const features = [
-        "Senior-only team across design, code & growth.",
-        "Direct founder access on every project.",
-        "Experience with India, EU and Middle East markets.",
+        "Full stack: React, TypeScript, Node, Express, MongoDB.",
+        "Shipped products at RSTForum, Hi‑technic & freelance (Upwork + local).",
+        "Focused on clean architecture, performance and maintainable code.",
     ];
 
     return (
@@ -27,19 +27,19 @@ const About = () => {
                         className="text-center lg:text-left"
                     >
                         <h2 className="text-blue-400 font-bold tracking-[0.25em] text-xs sm:text-sm mb-3 uppercase">
-                            About DevNexus
+                            About me
                         </h2>
 
                         <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 sm:mb-5 leading-tight">
-                            A small team that
+                            Satyam Sawant —
                             <br className="hidden sm:block" />
-                            ships <span className="text-blue-400">big results.</span>
+                            <span className="text-blue-400">full stack developer.</span>
                         </h3>
 
                         <p className="text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0">
-                            We act like your in‑house product squad — designing, building
-                            and launching digital experiences that look premium and convert
-                            from day one.
+                            I&apos;m a full stack developer who enjoys turning complex problems into
+                            fast, reliable web apps — from REST APIs and databases to polished
+                            React interfaces.
                         </p>
                     </motion.div>
 
@@ -53,7 +53,7 @@ const About = () => {
                     >
                         <div className="bg-slate-950 p-6 sm:p-8 rounded-2xl sm:rounded-[1.4rem]">
                             <h4 className="text-white font-bold text-lg sm:text-xl mb-4">
-                                Built for founders & teams
+                                What I bring
                             </h4>
 
                             <ul className="space-y-4">

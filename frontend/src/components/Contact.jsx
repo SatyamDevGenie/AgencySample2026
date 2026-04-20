@@ -1,6 +1,12 @@
 import React from "react";
 import { Mail, ArrowUpRight, PhoneCall } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
+
+/** Replace with your real profile URLs */
+const INSTAGRAM_URL = "https://www.instagram.com/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/";
+const GITHUB_URL = "https://github.com/";
 
 const Contact = () => {
     return (
@@ -58,7 +64,7 @@ const Contact = () => {
                                     Drop us a line
                                 </p>
                                 <p className="text-slate-200 text-sm sm:text-base mt-1">
-                                    We reply personally within 24 hours, wherever you are in the world.
+                                    I reply within 24 hours — India & remote.
                                 </p>
                             </div>
                         </motion.div>
@@ -79,7 +85,7 @@ const Contact = () => {
                                 animate={{ opacity: [0.6, 1, 0.6] }}
                                 transition={{ duration: 3, repeat: Infinity }}
                             >
-                                No forms. Just humans on the other side.
+                                Open for freelance & collaborations.
                             </motion.span>
                         </motion.div>
 
@@ -112,8 +118,44 @@ const Contact = () => {
                                     </a>
                                 </div>
                                 <span className="text-xs sm:text-sm text-slate-500">
-                                    WhatsApp / Call between 10 AM – 7 PM IST
+                                    WhatsApp / Call · 10 AM – 7 PM IST
                                 </span>
+                            </div>
+
+                            <div className="flex flex-wrap items-center gap-4 pt-2 border-t border-white/10">
+                                <span className="text-[11px] uppercase tracking-[0.2em] text-slate-500 w-full sm:w-auto">
+                                    Social
+                                </span>
+                                <a
+                                    href={INSTAGRAM_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm text-slate-100 hover:bg-slate-700 hover:text-white transition-colors"
+                                    aria-label="Instagram"
+                                >
+                                    <FaInstagram className="text-pink-400 text-lg" />
+                                    Instagram
+                                </a>
+                                <a
+                                    href={LINKEDIN_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm text-slate-100 hover:bg-slate-700 hover:text-white transition-colors"
+                                    aria-label="LinkedIn"
+                                >
+                                    <FaLinkedin className="text-blue-400 text-lg" />
+                                    LinkedIn
+                                </a>
+                                <a
+                                    href={GITHUB_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-4 py-2 text-sm text-slate-100 hover:bg-slate-700 hover:text-white transition-colors"
+                                    aria-label="GitHub"
+                                >
+                                    <FaGithub className="text-slate-200 text-lg" />
+                                    GitHub
+                                </a>
                             </div>
                         </motion.div>
                     </div>
