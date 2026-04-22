@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 const timeline = [
   {
     period: "Jan 2026 – Present",
-    title: "Freelance Full Stack Developer",
-    company: "Upwork & local clients",
+    title: "Software Developer - freelancing",
+    company: "Upwork & local clients - part time",
     desc: "Building products end-to-end for international and local businesses — web apps, APIs and integrations.",
   },
   {
@@ -16,7 +16,7 @@ const timeline = [
   },
   {
     period: "Jan 2023 – Jun 2023",
-    title: "Full Stack Internship",
+    title: "Full Stack Developer Training",
     company: "RSTForum",
     desc: "Six-month internship across frontend and backend — real projects, code reviews and team workflows.",
   },

@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 /** Replace with your real profile URLs */
-const INSTAGRAM_URL = "https://www.instagram.com/";
-const LINKEDIN_URL = "https://www.linkedin.com/in/";
-const GITHUB_URL = "https://github.com/";
+const INSTAGRAM_URL = "https://www.instagram.com/satyam.sawant.18?igsh=MW5mOGRqMnNjcHJsZg%3D%3D";
+const LINKEDIN_URL = "https://www.linkedin.com/in/satyam-sawant-a257802a7/";
+const GITHUB_URL = "https://github.com/SatyamDevGenie";
 
 const Contact = () => {
     return (
@@ -100,7 +100,7 @@ const Contact = () => {
                                 href="mailto:hello@devnexus.agency"
                                 className="inline-flex flex-wrap items-center gap-3 text-lg sm:text-xl md:text-2xl font-semibold text-white hover:text-blue-400 transition-colors break-all"
                             >
-                                hello@devnexus.agency
+                                satyamsawant54@gmail.com
                                 <ArrowUpRight
                                     size={22}
                                     className="text-blue-500 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
@@ -114,11 +114,11 @@ const Contact = () => {
                                         href="tel:+919876543210"
                                         className="font-medium hover:text-blue-400 transition-colors"
                                     >
-                                        +91 98765 43210
+                                        +91 9326903988
                                     </a>
                                 </div>
                                 <span className="text-xs sm:text-sm text-slate-500">
-                                    WhatsApp / Call · 10 AM – 7 PM IST
+                                    WhatsApp / Call · 10 AM – 5 PM IST
                                 </span>
                             </div>
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import VisualBackground from "./VisualBackground";
-import RobotIllustration from "./RobotIllustration";
 import { RESUME_URL, RESUME_FILENAME } from "../resume";
 
 const Hero = () => {
@@ -69,7 +68,20 @@ const Hero = () => {
         </motion.div>
 
         <div className="order-first lg:order-last">
-          <RobotIllustration />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="relative w-full max-w-md mx-auto"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+              <img
+                src="/images/satyam developer.jpeg"
+                alt="Satyam Developer"
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          </motion.div>
         </div>
         </div>
       </div>
